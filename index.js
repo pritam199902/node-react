@@ -26,6 +26,10 @@ app.post('/', (req, res) =>{
   res.send("Hello !");
 });
 
+app.get('/', (req, res) => {
+ res.send('Hello , Welcome...........') ;
+})
+
 app.get('/', requireToken, (req, res) => {
   res.send(`Your Email is : ${req.user.email}`)
 ;})
